@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Tokens. One accent (cyan) locked across the whole page. Severity colours are
+   semantic state, not decoration, so they sit outside the accent lock.
+   Radius scale is single-valued and near-sharp: this is an instrument.
+   --------------------------------------------------------------------------- */
+:root {
+  --bg:            #fbfbfa;
+  --panel:         #ffffff;
+  --panel-sunk:    #f4f4f2;
+  --line:          #e3e3df;
+  --line-strong:   #cfcfc9;
+
+  --text:          #16181a;
+  --text-dim:      #5c6166;
+  --text-faint:    #8b9095;
+
+  --accent:        #0e7c86;
+  --accent-soft:   #0e7c8618;
+
+  --sev-high:      #b3261e;
+  --sev-high-soft: #b3261e14;
+  --sev-med:       #8a5a00;
+  --sev-med-soft:  #8a5a0014;
+
+  --radius: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:            #0b0c0d;
+    --panel:         #121415;
+    --panel-sunk:    #0e1011;
+    --line:          #232729;
+    --line-strong:   #333a3d;
+
+    --text:          #e8eaeb;
+    --text-dim:      #9aa1a6;
+    --text-faint:    #6b7378;
+
+    --accent:        #4fd1c5;
+    --accent-soft:   #4fd1c51a;
+
+    --sev-high:      #ff6b6b;
+    --sev-high-soft: #ff6b6b16;
+    --sev-med:       #e8b046;
+    --sev-med-soft:  #e8b04616;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-sunk: var(--panel-sunk);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--text);
+  --color-dim: var(--text-dim);
+  --color-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-sev-high: var(--sev-high);
+  --color-sev-high-soft: var(--sev-high-soft);
+  --color-sev-med: var(--sev-med);
+  --color-sev-med-soft: var(--sev-med-soft);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+
+  --radius-inst: var(--radius);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Density 8: every number is monospaced so columns align and digits do not
+   jitter as values tick. */
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Hairline rules carry the structure instead of card boxes. */
+.rule {
+  border-color: var(--line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
