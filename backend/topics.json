@@ -1,0 +1,174 @@
+{
+  "_comment": "Each topic is a list of literal phrases, matched case-insensitively on word boundaries. Add/remove freely - the collector reloads this on restart. Mix of high-volume topics (validate the baseline works) and crisis primitives (the ones worth alerting on).",
+  "outage": [
+    "outage",
+    "is down",
+    "are down",
+    "downdetector",
+    "service disruption",
+    "cant log in",
+    "can't log in",
+    "not loading"
+  ],
+  "databreach": [
+    "data breach",
+    "leaked passwords",
+    "hacked account",
+    "security breach",
+    "ransomware",
+    "credentials leaked"
+  ],
+  "recall": [
+    "product recall",
+    "recalled",
+    "safety recall",
+    "do not eat",
+    "contamination"
+  ],
+  "boycott": [
+    "boycott",
+    "boycotting",
+    "cancel my subscription",
+    "cancelling my subscription",
+    "deleting my account"
+  ],
+  "layoffs": [
+    "layoffs",
+    "laid off",
+    "job cuts",
+    "redundancies",
+    "hiring freeze"
+  ],
+  "strike": [
+    "on strike",
+    "walkout",
+    "picket line",
+    "union vote"
+  ],
+  "earthquake": [
+    "earthquake",
+    "aftershock",
+    "seismic",
+    "magnitude"
+  ],
+  "storm": [
+    "hurricane",
+    "typhoon",
+    "cyclone",
+    "tornado",
+    "flooding",
+    "wildfire"
+  ],
+  "explosion": [
+    "explosion",
+    "blast",
+    "evacuated",
+    "evacuation"
+  ],
+  "ai": {
+    "phrases": [
+      "artificial intelligence",
+      "ai",
+      "llm",
+      "chatgpt",
+      "generative ai"
+    ],
+    "langs": [
+      "en"
+    ]
+  },
+  "openai": [
+    "openai",
+    "chatgpt",
+    "sam altman",
+    "gpt-5",
+    "gpt5"
+  ],
+  "anthropic": [
+    "anthropic",
+    "claude ai",
+    "claude code"
+  ],
+  "google": [
+    "google",
+    "gemini",
+    "alphabet",
+    "youtube"
+  ],
+  "apple": [
+    "apple",
+    "iphone",
+    "ipad",
+    "macbook",
+    "ios update"
+  ],
+  "microsoft": [
+    "microsoft",
+    "windows 11",
+    "azure",
+    "xbox",
+    "copilot"
+  ],
+  "meta": [
+    "facebook",
+    "instagram",
+    "whatsapp",
+    "zuckerberg",
+    "threads app"
+  ],
+  "tesla": [
+    "tesla",
+    "elon musk",
+    "cybertruck",
+    "spacex"
+  ],
+  "crypto": [
+    "bitcoin",
+    "ethereum",
+    "crypto",
+    "btc",
+    "blockchain"
+  ],
+  "election": [
+    "election",
+    "ballot",
+    "polling station",
+    "vote count",
+    "candidate"
+  ],
+  "ukraine": [
+    "ukraine",
+    "kyiv",
+    "zelensky"
+  ],
+  "climate": [
+    "climate change",
+    "global warming",
+    "emissions",
+    "cop30"
+  ],
+  "football": [
+    "premier league",
+    "champions league",
+    "world cup",
+    "offside",
+    "penalty kick"
+  ],
+  "nba": [
+    "nba",
+    "playoffs",
+    "lakers",
+    "celtics"
+  ],
+  "netflix": [
+    "netflix",
+    "streaming show",
+    "new season"
+  ],
+  "music": [
+    "taylor swift",
+    "new album",
+    "tour dates",
+    "concert tickets"
+  ]
+}
