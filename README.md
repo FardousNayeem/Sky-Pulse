@@ -318,22 +318,13 @@ endpoints are for impatience or for a database nobody is collecting into.
 ```
 backend/
   app/
-    core/        pure domain logic, no I/O or framework, fully unit-tested
-                 detector  spike scoring, seasonal + trailing baselines
-                 matcher   watchlist topics, regex with language scoping
-                 terms     discovery: tokenising and bounded top-k counting
-                 events    co-occurrence graph, Louvain, chaining
-                 lsh       MinHash + LSH, first story detection
-                 novelty   distinctive terms and most-shared links
-                 horizons  the 1h / 4h / 9h definitions
-                 features  the model's inputs and its label
-                 logistic  logistic regression, fitting and inference
+    core/        pure domain logic, detector, spike scoring, model fitting and inference
     db/          every SQL statement in the project
     services/    use cases composed from core + db
     api/         HTTP routes and dependency wiring
     ingest/      jetstream transport, collector orchestration, trend polling
   tests/
-    test_core.py      pure logic: no database, no network, no framework
+    test_core.py      testing core functionalities of the backend
     test_services.py  what only breaks with real SQLite: transactions, migrations
   run_collector.py    stream the firehose
   run_detect.py       score stored history
