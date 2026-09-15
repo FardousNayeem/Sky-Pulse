@@ -1,0 +1,23 @@
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# data
+backend/data/*.db
+backend/data/*.db-wal
+backend/data/*.db-shm
+backend/.env
+
+# node
+node_modules/
+.next/
+*.tsbuildinfo
+frontend/.env.local
+
+# keep docs screenshots tracked
+!docs/*.png
+
+# os
+.DS_Store
